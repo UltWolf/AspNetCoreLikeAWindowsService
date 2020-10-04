@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Language="1033" Version="1.0.0.0" Name="ApiLikeAService" Manufacturer="manufacturor" UpgradeCode="d97ed8fd-d537-49aa-a357-393fc695a9ef">
+		<Package InstallerVersion="200" Compressed="yes" />
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+		<Feature Id="ProductFeature" Title="ApiLikeAService" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+
+	</Product> 
+
+	<Fragment>
+		<SetDirectory Id="DDrive" Value="D:\WindowsService" Sequence="both"/>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="DDrive" Name="AppName"> 
+				<Directory Id="INSTALLFOLDER" Name="ApiLikeAService" />
+			</Directory>
+		</Directory>
+	</Fragment>
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<Component Id="Libraries" Guid="e7783c14-c1ec-4703-ad23-a8bf65ff2e28"> 
+				<File Id="LibraryProduct1" Name="Microsoft.Extensions.Configuration.Abstractions.dll"
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="LibraryProduct2" Name="Microsoft.Extensions.Configuration.Binder.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll"  DiskId="1" />
+				<File Id="LibraryProduct3" Name="Microsoft.Extensions.Configuration.CommandLine.dll"
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll"  DiskId="1" />
+				<File Id="LibraryProduct4" Name="Microsoft.Extensions.Configuration.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll"  DiskId="1" />
+				<File Id="LibraryProduct5" Name="Microsoft.Extensions.Configuration.EnvironmentVariables.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll"  DiskId="1" />
+				<File Id="LibraryProduct6" Name="Microsoft.Extensions.Configuration.FileExtensions.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll"  DiskId="1" />
+				<File Id="LibraryProduct7" Name="Microsoft.Extensions.Configuration.Json.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll"  DiskId="1" />
+				<File Id="LibraryProduct8" Name="Microsoft.Extensions.Configuration.UserSecrets.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll"  DiskId="1" />
+				<File Id="LibraryProduct9" Name="Microsoft.Extensions.DependencyInjection.Abstractions.dll"
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll"  DiskId="1" />
+				<File Id="LibraryProduct10" Name="Microsoft.Extensions.DependencyInjection.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll"  DiskId="1" />
+				<File Id="LibraryProduct11" Name="Microsoft.Extensions.FileProviders.Abstractions.dll"
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll"  DiskId="1" />
+				<File Id="LibraryProduct12" Name="Microsoft.Extensions.FileProviders.Physical.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll"  DiskId="1" />
+				<File Id="LibraryProduct13" Name="Microsoft.Extensions.FileSystemGlobbing.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll"  DiskId="1" />
+				<File Id="LibraryProduct14" Name="Microsoft.Extensions.Hosting.Abstractions.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll"  DiskId="1" />
+				<File Id="LibraryProduct15" Name="Microsoft.Extensions.Hosting.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll"  DiskId="1" />
+				<File Id="LibraryProduct16" Name="Microsoft.Extensions.Hosting.WindowsServices.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.WindowsServices.dll"  DiskId="1" />
+				<File Id="LibraryProduct17" Name="Microsoft.Extensions.Logging.Abstractions.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll"  DiskId="1" />
+				<File Id="LibraryProduct18" Name="Microsoft.Extensions.Logging.Configuration.dll"
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll"  DiskId="1" />
+				<File Id="LibraryProduct19" Name="Microsoft.Extensions.Logging.Console.dll"
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll"  DiskId="1" />
+				<File Id="LibraryProduct20" Name="Microsoft.Extensions.Logging.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll"  DiskId="1" />
+				<File Id="LibraryProduct21" Name="Microsoft.Extensions.Logging.EventLog.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll"  DiskId="1" />
+				<File Id="LibraryProduct22" Name="Microsoft.Extensions.Logging.EventSource.dll"
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll"  DiskId="1" />
+				<File Id="LibraryProduct23" Name="Microsoft.Extensions.Options.ConfigurationExtensions.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll"  DiskId="1" />
+				<File Id="LibraryProduct24" Name="Microsoft.Extensions.Options.dll"
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll"  DiskId="1" />
+				<File Id="LibraryProduct25" Name="Microsoft.Extensions.Primitives.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll"  DiskId="1" />
+				<File Id="LibraryProduct26" Name="System.Diagnostics.EventLog.dll"
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll"  DiskId="1" />
+				<File Id="LibraryProduct27" Name="System.ServiceProcess.ServiceController.dll" 
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\System.ServiceProcess.ServiceController.dll"  DiskId="1" />
+				<File Id="LibraryProduct28" Name="Microsoft.Extensions.Logging.Debug.dll"
+					  Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll"  DiskId="1" />
+				<File Id="LibraryProduct29" Name="appsettings.json"
+				  Source="..\Server like a service\bin\Debug\netcoreapp3.1\appsettings.json"  DiskId="1" />
+				<File Id="LibraryProduct30" Name="WindowsService.deps.json"
+				  Source="..\Server like a service\bin\Debug\netcoreapp3.1\WindowsService.deps.json"  DiskId="1" />
+				<File Id="LibraryProduct31" Name="WindowsService.runtimeconfig.json"
+				  Source="..\Server like a service\bin\Debug\netcoreapp3.1\WindowsService.runtimeconfig.json"  DiskId="1" />
+				<File Id="LibraryProduct32" Name="WindowsService.runtimeconfig.dev.json"
+				  Source="..\Server like a service\bin\Debug\netcoreapp3.1\WindowsService.runtimeconfig.dev.json"  DiskId="1" />
+				<!--<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll"  DiskId="1" />-->
+			</Component>
+			<Component Id="WindowsService" Guid="2b6ee2fa-89d5-44dd-9212-a518a0bbb630">
+				
+				<File Id="WindowsService" Name="$(var.WindowsService.TargetFileName)" Source="$(var.WindowsService.TargetPath)" DiskId="1" />
+				<ServiceInstall
+		Id="ServiceInstaller"
+		Type="ownProcess"
+		Vital="yes"
+		Name="ApiLikeAService"
+		DisplayName="ApiLikeAService"
+		Description="ApiLikeAService"
+		Start="auto"
+		Account="NT AUTHORITY\LocalService"
+		ErrorControl="ignore"
+		Interactive="no">
+				</ServiceInstall>
+				<ServiceControl Id="StartService" Start="install" Stop="both" Remove="uninstall" Name="ApiLikeAService" Wait="yes" />
+
+				<File Id="WindowsService.exe" Name="WindowsService.exe" Source="..\Server like a service\bin\Debug\netcoreapp3.1\WindowsService.exe"  DiskId="1" />
+			</Component>
+			<Component Id="Setting" Guid="8d88d980-1cca-4d8e-aba0-759e9c05d3bb">
+				<File Id="Setting" Source="Sources\settings.json" KeyPath="yes" />
+			</Component>
+			
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+			<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+		</ComponentGroup>
+	</Fragment>
+	<Fragment>
+		<Feature Id="ApiLikeAService" Title="Main Application" Level="1">
+			<ComponentRef Id="WindowsService" />
+			<ComponentRef Id="Setting" />
+			<ComponentRef Id="WindowsService.exe"/>
+		</Feature>
+	</Fragment>
+</Wix>

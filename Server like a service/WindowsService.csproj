@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Server_like_a_service</RootNamespace>
+    <OutputType>Exe</OutputType>
+
+	  <EnableProjectHarvesting>True</EnableProjectHarvesting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="3.1.8" />
+  </ItemGroup>
+
+
+</Project>
